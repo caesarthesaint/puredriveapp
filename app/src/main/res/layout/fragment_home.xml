@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pd_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <ScrollView
+        android:id="@+id/maincontent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:outlineProvider="background"
+            tools:context=".HomeActivity"
+            tools:ignore="SpeakableTextPresentCheck">
+
+            <EditText
+                android:id="@+id/editTextTextPersonName"
+                android:layout_width="310dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="76dp"
+                android:background="#00FFFFFF"
+                android:ems="10"
+                android:foreground="@drawable/seasrchrec"
+                android:inputType="textPersonName"
+                android:textColor="#777E90"
+                app:layout_constraintEnd_toStartOf="@+id/filtericon"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <ImageButton
+                android:id="@+id/filtericon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="76dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:minWidth="55dp"
+                android:minHeight="55dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.994"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/filter"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <ImageView
+                android:id="@+id/rec1"
+                android:layout_width="416dp"
+                android:layout_height="285dp"
+                android:layout_marginTop="140dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/rectangle_3" />
+
+            <ImageView
+                android:id="@+id/fortuner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="32dp"
+                app:layout_constraintStart_toStartOf="@+id/rec1"
+                app:layout_constraintTop_toTopOf="@+id/rec1"
+                app:srcCompat="@drawable/fortuner" />
+
+            <TextView
+                android:id="@+id/vehName"
+                android:layout_width="273dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="168dp"
+                android:fontFamily="@font/jost_semibold"
+                android:singleLine="true"
+                android:text="Toyota Fortuner"
+                android:textColor="#000000"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/rec1"
+                app:layout_constraintTop_toTopOf="@+id/rec1" />
+
+            <ImageView
+                android:id="@+id/vehLoc1"
+                android:layout_width="16dp"
+                android:layout_height="20dp"
+                app:layout_constraintStart_toStartOf="@+id/vehName"
+                app:layout_constraintTop_toBottomOf="@+id/vehName"
+                app:srcCompat="@drawable/loc_icon2" />
+
+            <TextView
+                android:id="@+id/vehLocText1"
+                android:layout_width="65dp"
+                android:layout_height="21dp"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/jost"
+                android:text="Pasig, PH"
+                app:layout_constraintStart_toEndOf="@+id/vehLoc1"
+                app:layout_constraintTop_toBottomOf="@+id/vehName" />
+
+            <TextView
+                android:id="@+id/vehPrice1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="240dp"
+                android:fontFamily="@font/jost_semibold"
+                android:text="₱2000 / day"
+                android:textColor="#009688"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/rec1"
+                app:layout_constraintTop_toTopOf="@+id/rec1" />
+
+            <ImageButton
+                android:id="@+id/rentbtn1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="284dp"
+                android:layout_marginTop="220dp"
+                android:background="#00FFFFFF"
+                android:minHeight="48dp"
+                app:layout_constraintStart_toStartOf="@+id/rec1"
+                app:layout_constraintTop_toTopOf="@+id/rec1"
+                app:srcCompat="@drawable/rent_button"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/jost_semibold"
+                android:text="RENT NOW"
+                android:textColor="#FFFFFF"
+                app:layout_constraintStart_toStartOf="@+id/rentbtn1"
+                app:layout_constraintTop_toTopOf="@+id/rentbtn1" />
+
+            <ImageView
+                android:id="@+id/gas1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="336dp"
+                android:layout_marginTop="32dp"
+                app:layout_constraintStart_toStartOf="@+id/rec1"
+                app:layout_constraintTop_toTopOf="@+id/rec1"
+                app:srcCompat="@drawable/gas" />
+
+            <TextView
+                android:id="@+id/gascap1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/jost"
+                android:text="80L"
+                android:textAlignment="center"
+                android:textSize="17sp"
+                app:layout_constraintStart_toEndOf="@+id/gas1"
+                app:layout_constraintTop_toTopOf="@+id/gas1" />
+
+            <ImageView
+                android:id="@+id/seatcap1"
+                android:layout_width="31dp"
+                android:layout_height="31dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="@+id/gas1"
+                app:layout_constraintTop_toBottomOf="@+id/gas1"
+                app:srcCompat="@drawable/seatcap" />
+
+            <TextView
+                android:id="@+id/seatcap"
+                android:layout_width="10dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/jost"
+                android:text="7"
+                android:textSize="17sp"
+                app:layout_constraintStart_toEndOf="@+id/seatcap1"
+                app:layout_constraintTop_toTopOf="@+id/seatcap1" />
+
+            <ImageView
+                android:id="@+id/gear1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="@+id/seatcap1"
+                app:layout_constraintTop_toBottomOf="@+id/seatcap1"
+                app:srcCompat="@drawable/gear" />
+
+            <TextView
+                android:id="@+id/trans1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/jost"
+                android:text="AT"
+                android:textAlignment="center"
+                android:textSize="17sp"
+                app:layout_constraintStart_toEndOf="@+id/gear1"
+                app:layout_constraintTop_toTopOf="@+id/gear1" />
+
+            <ImageView
+                android:id="@+id/rec7"
+                android:layout_width="416dp"
+                android:layout_height="285dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rec1"
+                app:srcCompat="@drawable/rectangle_3" />
+
+            <ImageView
+                android:id="@+id/supra"
+                android:layout_width="301dp"
+                android:layout_height="128dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="32dp"
+                app:layout_constraintStart_toStartOf="@+id/rec7"
+                app:layout_constraintTop_toTopOf="@+id/rec7"
+                app:srcCompat="@drawable/supra2" />
+
+            <TextView
+                android:id="@+id/vehName1"
+                android:layout_width="273dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="168dp"
+                android:fontFamily="@font/jost_semibold"
+                android:singleLine="true"
+                android:text="Toyota Supra"
+                android:textColor="#000000"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/rec7"
+                app:layout_constraintTop_toTopOf="@+id/rec7" />
+
+            <ImageView
+                android:id="@+id/vehLoc2"
+                android:layout_width="16dp"
+                android:layout_height="20dp"
+                app:layout_constraintStart_toStartOf="@+id/vehName1"
+                app:layout_constraintTop_toBottomOf="@+id/vehName1"
+                app:srcCompat="@drawable/loc_icon2" />
+
+            <TextView
+                android:id="@+id/vehLocText2"
+                android:layout_width="65dp"
+                android:layout_height="21dp"
+                android:fontFamily="@font/jost"
+                android:text="Makati, PH"
+                app:layout_constraintStart_toEndOf="@+id/vehLoc2"
+                app:layout_constraintTop_toBottomOf="@+id/vehName1" />
+
+            <TextView
+                android:id="@+id/vehPrice2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="240dp"
+                android:fontFamily="@font/jost_semibold"
+                android:text="₱3499 / day"
+                android:textColor="#009688"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/rec7"
+                app:layout_constraintTop_toTopOf="@+id/rec7" />
+
+            <ImageView
+                android:id="@+id/gas2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                app:layout_constraintStart_toEndOf="@+id/supra"
+                app:layout_constraintTop_toTopOf="@+id/rec7"
+                app:srcCompat="@drawable/gas" />
+
+            <TextView
+                android:id="@+id/gascap4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/jost"
+                android:text="52L"
+                android:textAlignment="center"
+                android:textSize="17sp"
+                app:layout_constraintStart_toEndOf="@+id/gas2"
+                app:layout_constraintTop_toTopOf="@+id/gas2" />
+
+            <ImageView
+                android:id="@+id/seatcap2"
+                android:layout_width="31dp"
+                android:layout_height="31dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="80dp"
+                app:layout_constraintStart_toEndOf="@+id/supra"
+                app:layout_constraintTop_toTopOf="@+id/rec7"
+                app:srcCompat="@drawable/seatcap" />
+
+            <TextView
+                android:id="@+id/seatcap3"
+                android:layout_width="10dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/jost"
+                android:text="2"
+                android:textSize="17sp"
+                app:layout_constraintStart_toEndOf="@+id/seatcap2"
+                app:layout_constraintTop_toTopOf="@+id/seatcap2" />
+
+            <ImageView
+                android:id="@+id/trans2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="128dp"
+                app:layout_constraintStart_toEndOf="@+id/supra"
+                app:layout_constraintTop_toTopOf="@+id/rec7"
+                app:srcCompat="@drawable/gear" />
+
+            <TextView
+                android:id="@+id/trans3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/jost"
+                android:text="MT"
+                android:textAlignment="center"
+                android:textSize="17sp"
+                app:layout_constraintStart_toEndOf="@+id/trans2"
+                app:layout_constraintTop_toTopOf="@+id/trans2" />
+
+            <ImageButton
+                android:id="@+id/rentbtn2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="284dp"
+                android:layout_marginTop="224dp"
+                android:background="#00FFFFFF"
+                android:minHeight="48dp"
+                app:layout_constraintStart_toStartOf="@+id/rec7"
+                app:layout_constraintTop_toTopOf="@+id/rec7"
+                app:srcCompat="@drawable/rent_button"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/jost_semibold"
+                android:text="RENT NOW"
+                android:textColor="#FFFFFF"
+                app:layout_constraintStart_toStartOf="@+id/rentbtn2"
+                app:layout_constraintTop_toTopOf="@+id/rentbtn2" />
+
+            <ImageView
+                android:id="@+id/rec8"
+                android:layout_width="416dp"
+                android:layout_height="285dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rec7"
+                app:srcCompat="@drawable/rectangle_3" />
+
+            <ImageButton
+                android:id="@+id/rentbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="284dp"
+                android:layout_marginTop="224dp"
+                android:background="#00FFFFFF"
+                android:minHeight="48dp"
+                app:layout_constraintStart_toStartOf="@+id/rec8"
+                app:layout_constraintTop_toTopOf="@+id/rec8"
+                app:srcCompat="@drawable/rent_button"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/jost_semibold"
+                android:text="RENT NOW"
+                android:textColor="#FFFFFF"
+                app:layout_constraintStart_toStartOf="@+id/rentbtn"
+                app:layout_constraintTop_toTopOf="@+id/rentbtn" />
+
+            <ImageView
+                android:id="@+id/lambo"
+                android:layout_width="306dp"
+                android:layout_height="143dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="@+id/rec8"
+                app:layout_constraintTop_toTopOf="@+id/rec8"
+                app:srcCompat="@drawable/lambo" />
+
+            <TextView
+                android:id="@+id/vehName2"
+                android:layout_width="272dp"
+                android:layout_height="34dp"
+                android:fontFamily="@font/jost_semibold"
+                android:singleLine="true"
+                android:text="Lamborghini Aventador"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/lambo"
+                app:layout_constraintTop_toBottomOf="@+id/lambo" />
+
+            <TextView
+                android:id="@+id/vehPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/jost_semibold"
+                android:text="₱6999 / day"
+                android:textColor="#009688"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/vehLoc"
+                app:layout_constraintTop_toBottomOf="@+id/vehLocText" />
+
+            <ImageView
+                android:id="@+id/vehLoc"
+                android:layout_width="16dp"
+                android:layout_height="20dp"
+                app:layout_constraintStart_toStartOf="@+id/vehName2"
+                app:layout_constraintTop_toBottomOf="@+id/vehName2"
+                app:srcCompat="@drawable/loc_icon2" />
+
+            <TextView
+                android:id="@+id/vehLocText"
+                android:layout_width="65dp"
+                android:layout_height="21dp"
+                android:fontFamily="@font/jost"
+                android:text="Makati, PH"
+                app:layout_constraintStart_toEndOf="@+id/vehLoc"
+                app:layout_constraintTop_toBottomOf="@+id/vehName2" />
+
+            <ImageView
+                android:id="@+id/trans"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toEndOf="@+id/lambo"
+                app:layout_constraintTop_toBottomOf="@+id/seatcap5"
+                app:srcCompat="@drawable/gear" />
+
+            <ImageView
+                android:id="@+id/gas"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toEndOf="@+id/lambo"
+                app:layout_constraintTop_toTopOf="@+id/lambo"
+                app:srcCompat="@drawable/gas" />
+
+            <TextView
+                android:id="@+id/seatcap4"
+                android:layout_width="10dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/jost"
+                android:text="2"
+                android:textSize="17sp"
+                app:layout_constraintStart_toEndOf="@+id/seatcap5"
+                app:layout_constraintTop_toTopOf="@+id/seatcap5" />
+
+            <TextView
+                android:id="@+id/gascap"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/jost"
+                android:text="90L"
+                android:textAlignment="center"
+                android:textSize="17sp"
+                app:layout_constraintStart_toEndOf="@+id/gas"
+                app:layout_constraintTop_toTopOf="@+id/gas" />
+
+            <ImageView
+                android:id="@+id/seatcap5"
+                android:layout_width="31dp"
+                android:layout_height="31dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toEndOf="@+id/lambo"
+                app:layout_constraintTop_toBottomOf="@+id/gas"
+                app:srcCompat="@drawable/seatcap" />
+
+            <TextView
+                android:id="@+id/trans4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/jost"
+                android:text="MT"
+                android:textAlignment="center"
+                android:textSize="17sp"
+                app:layout_constraintStart_toEndOf="@+id/trans"
+                app:layout_constraintTop_toTopOf="@+id/trans" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/topnav"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/topnavbg"
+            android:layout_width="match_parent"
+            android:layout_height="286dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="-215dp"
+            android:layout_marginEnd="0dp"
+            android:background="#00FFFFFF"
+            android:backgroundTint="#00FFFFFF"
+            android:src="@drawable/rectangle_3" />
+
+        <ImageButton
+            android:id="@+id/notifbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="#00FFFFFF"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            app:srcCompat="@drawable/notif_icon"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/locText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/jost"
+            android:shadowColor="#000000"
+            android:shadowDx="1.5"
+            android:shadowDy="1.3"
+            android:shadowRadius="1.6"
+            android:text="Location"
+            android:textColor="#6A6A6A" />
+
+        <TextView
+            android:id="@+id/currentLoc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/locText"
+            android:layout_alignStart="@+id/locText"
+            android:fontFamily="@font/jost"
+            android:text="Manila, Philippines" />
+
+        <ImageView
+            android:id="@+id/pinIcon"
+            android:layout_width="15dp"
+            android:layout_height="18dp"
+            android:layout_alignTop="@+id/locText"
+            android:layout_marginStart="4dp"
+            android:layout_toEndOf="@+id/locText"
+            app:srcCompat="@drawable/placeholder" />
+
+    </RelativeLayout>
+</FrameLayout>
