@@ -20,15 +20,18 @@ class MainActivity : AppCompatActivity() {
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         val navController = findNavController(R.id.fragment)
 
-        val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
+        //val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
 
-        bottomNavigationView.setupWithNavController(navController)
+      bottomNavigationView.setupWithNavController(navController)
 
-        layoutManager = LinearLayoutManager(this)
+        /*
+        var layoutManager = LinearLayoutManager(this)
 
         recyclerView.layoutManager = layoutManager
 
         adapter = RecyclerAdapter()
         recyclerView.adapter = adapter
+
+         */
     }
 }

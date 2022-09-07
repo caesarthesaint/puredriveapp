@@ -1,5 +1,42 @@
 <resources>
     <string name="app_name">puredriveapp</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="daily">Daily</string>
+
+    <string name="weekly">Weekly</string>
+
+    <string name="monthly">Monthly</string>
+
+    <string name="clear_all_f">Clear all filters</string>
+
+    <string name="filter">Filter</string>
+
+    <string name="price">Price</string>
+
+    <string name="minimum_pri">Minimum price</string>
+
+    <string name="maximum_pri">Maximum price</string>
+
+    <string name="messages">Messages</string>
+
+    <string name="some_id">+</string>
+
+    <string name="search_">Search...</string>
+
+    <string name="history">History</string>
+
+    <string name="you_have_no">You have no previous bookings yet.</string>
+
+    <string name="user_num">+639 12 345 6789</string>
+
+    <string name="fran_sorian">Fran Soriano</string>
+
+    <string name="current_boo">Current Bookings</string>
+
+    <string name="billing_add">Billing Address</string>
+
+    <string name="b3_l21_mont">B3 L21 Monte Bleu Executive Village\nMonte Bleu Ave., Quezon City</string>
+
+    <string name="fran_peter_">Fran Peter Csar T. Soriano</string>
+
 </resources>
