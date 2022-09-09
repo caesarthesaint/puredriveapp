@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -20,6 +22,14 @@ class HomeFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+
+    lateinit var recyclerView: RecyclerView
+    lateinit var adapter: VehicleRecyclerAdapter
+    lateinit var vehicleArrayList: ArrayList<Vehicle>
+
+    lateinit var names: Array<String>
+    lateinit var price: Array<String>
+    lateinit var location: Array<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,5 +65,49 @@ class HomeFragment : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initializeData()
+        val layoutManager = LinearLayoutManager(context)
+        recyclerView = view.findViewById(R.id.rvVehicles)
+        recyclerView.layoutManager = layoutManager
+        recyclerView.setHasFixedSize(true)
+        adapter = VehicleRecyclerAdapter(vehicleArrayList)
+        recyclerView.adapter = adapter
+    }
+
+    private fun initializeData() {
+        vehicleArrayList = arrayListOf<Vehicle>()
+        /*
+        names = arrayOf(
+            "Toyota Supra",
+            "Toyota Fortuner",
+            "Lamborghini Aventador"
+        )
+
+         */
+
+        names = arrayOf(
+            "Honda Civic",
+            "Ferrari Italia",
+            "Mini Cooper"
+        )
+        price = arrayOf(
+            "3499",
+            "2000",
+            "6999"
+        )
+        location = arrayOf(
+            "Pasig, NCR",
+            "Makati, NCR",
+            "Mandaluyong, NCR"
+        )
+
+        for(i in names.indices){
+            val vehicles = Vehicle(names[i],price[i],location[i])
+            vehicleArrayList.add(vehicles)
+        }
     }
 }

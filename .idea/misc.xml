@@ -4,22 +4,27 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Chris/Documents/GitHub/puredriveapp/app/src/main/res/layout-large/activity_main.xml" value="0.4007936507936508" />
-        <entry key="..\:/Users/Chris/Documents/GitHub/puredriveapp/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Users/Chris/Documents/GitHub/puredriveapp/app/src/main/res/layout/activity_sign_in.xml" value="0.36302083333333335" />
+        <entry key="..\:/Users/Chris/Documents/GitHub/puredriveapp/app/src/main/res/layout/activity_jemma.xml" value="0.2677083333333333" />
+        <entry key="..\:/Users/Chris/Documents/GitHub/puredriveapp/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Chris/Documents/GitHub/puredriveapp/app/src/main/res/layout/activity_sign_in.xml" value="0.22" />
         <entry key="..\:/Users/Chris/Documents/GitHub/puredriveapp/app/src/main/res/layout/activity_sign_up.xml" value="0.36302083333333335" />
-        <entry key="..\:/Users/Chris/Documents/GitHub/puredriveapp/app/src/main/res/layout/card_layout.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/Chris/Documents/GitHub/puredriveapp/app/src/main/res/layout/card_layout.xml" value="0.25" />
         <entry key="..\:/Users/Chris/Documents/GitHub/puredriveapp/app/src/main/res/layout/filter_1.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/Chris/Documents/GitHub/puredriveapp/app/src/main/res/layout/fragment_history.xml" value="0.17552083333333332" />
-        <entry key="..\:/Users/Chris/Documents/GitHub/puredriveapp/app/src/main/res/layout/fragment_home.xml" value="0.22" />
+        <entry key="..\:/Users/Chris/Documents/GitHub/puredriveapp/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/Users/Chris/Documents/GitHub/puredriveapp/app/src/main/res/layout/fragment_home2.xml" value="0.26875" />
         <entry key="..\:/Users/Chris/Documents/GitHub/puredriveapp/app/src/main/res/layout/fragment_msgs.xml" value="0.22" />
         <entry key="..\:/Users/Chris/Documents/GitHub/puredriveapp/app/src/main/res/layout/fragment_profile.xml" value="0.22" />
         <entry key="..\:/Users/Chris/Documents/GitHub/puredriveapp/app/src/main/res/layout/fragment_settings.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Chris/Documents/GitHub/puredriveapp/app/src/main/res/layout/history.xml" value="0.4466666666666667" />
+        <entry key="..\:/Users/Chris/Documents/GitHub/puredriveapp/app/src/main/res/layout/home_layout.xml" value="0.1" />
         <entry key="..\:/Users/Chris/Documents/GitHub/puredriveapp/app/src/main/res/layout/loc_filter.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Chris/Documents/GitHub/puredriveapp/app/src/main/res/layout/messages.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Chris/Documents/GitHub/puredriveapp/app/src/main/res/layout/price_filter_closed.xml" value="0.22" />
         <entry key="..\:/Users/Chris/Documents/GitHub/puredriveapp/app/src/main/res/layout/price_filter_open.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Chris/Documents/GitHub/puredriveapp/app/src/main/res/layout/sample_activity.xml" value="0.25" />
         <entry key="..\:/Users/Chris/Documents/GitHub/puredriveapp/app/src/main/res/layout/user_profile.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Chris/Documents/GitHub/puredriveapp/app/src/main/res/menu/bot_menu.xml" value="0.26875" />
         <entry key="..\:/puredriveapp/app/src/main/res/drawable-nodpi/color_shape.xml" value="0.316" />
         <entry key="..\:/puredriveapp/app/src/main/res/drawable-v24/_bg__messages___conversations_list___light___iphone_shape.xml" value="0.316" />
         <entry key="..\:/puredriveapp/app/src/main/res/drawable-v24/avatar_mask_ek1_shape.xml" value="0.316" />

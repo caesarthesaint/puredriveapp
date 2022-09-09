@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view3"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:outlineProvider="background"
+        >
+
+        <ImageView
+            android:id="@+id/ivVehicleBackground"
+            android:layout_width="416dp"
+            android:layout_height="285dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/rectangle_3" />
+
+        <ImageView
+            android:id="@+id/ivVehicleThumbnail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintStart_toStartOf="@+id/ivVehicleBackground"
+            app:layout_constraintTop_toTopOf="@+id/ivVehicleBackground"
+            />
+
+        <!--android:layout_width="273dp"-->
+    <TextView
+        android:id="@+id/tvVehicleName"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="168dp"
+        android:fontFamily="@font/jost_semibold"
+        android:singleLine="true"
+        android:textColor="#000000"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/ivVehicleBackground"
+        app:layout_constraintTop_toTopOf="@+id/ivVehicleBackground" />
+
+        <ImageView
+            android:id="@+id/ivVehicleLocation"
+            android:layout_width="16dp"
+            android:layout_height="20dp"
+            app:layout_constraintStart_toStartOf="@+id/tvVehicleName"
+            app:layout_constraintTop_toBottomOf="@+id/tvVehicleName"
+            app:srcCompat="@drawable/loc_icon2" />
+
+        <!--android:layout_width="16dp" -->
+    <TextView
+        android:id="@+id/tvVehicleLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/jost"
+        app:layout_constraintStart_toEndOf="@+id/ivVehicleLocation"
+        app:layout_constraintTop_toBottomOf="@+id/tvVehicleName" />
+
+    <TextView
+        android:id="@+id/tvVehiclePrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="240dp"
+        android:fontFamily="@font/jost_semibold"
+        android:textColor="#009688"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/ivVehicleBackground"
+        app:layout_constraintTop_toTopOf="@+id/ivVehicleBackground" />
+
+    <Button
+        android:id="@+id/btnVehicleRent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="284dp"
+        android:layout_marginTop="220dp"
+        android:minHeight="48dp"
+        android:text="BOOK NOW"
+        app:layout_constraintStart_toStartOf="@+id/ivVehicleBackground"
+        app:layout_constraintTop_toTopOf="@+id/ivVehicleBackground"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

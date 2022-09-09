@@ -18,20 +18,26 @@ private const val ARG_PARAM2 = "param2"
  * Use the [MsgsFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
+
 class MsgsFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
 
+    //lateinit var layoutManager: RecyclerView.LayoutManager
+    lateinit var recyclerView: RecyclerView
+    lateinit var adapter: MessageRecyclerAdapter
+    lateinit var messageArrayList: ArrayList<Message>
 
-
+    lateinit var title: Array<String>
+    lateinit var detail: Array<String>
+    lateinit var image: Array<Int>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
-
         }
     }
 
@@ -61,5 +67,80 @@ class MsgsFragment : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initializedata()
+        val layoutManager = LinearLayoutManager(context)
+        recyclerView = view.findViewById(R.id.rvMessages)
+        recyclerView.layoutManager = layoutManager
+        recyclerView.setHasFixedSize(true)
+        adapter = MessageRecyclerAdapter(messageArrayList)
+        recyclerView.adapter = adapter
+
+    }
+
+    private fun initializedata(){
+        messageArrayList = arrayListOf<Message>()
+
+        title =  arrayOf(
+            "Eunice",
+            "Yassi",
+            "Brian",
+            "Jam",
+            "Jemma",
+            "Geanne",
+            "Fran",
+            "Chanco",
+            "Erika",
+            "JV",
+            "Chris",
+            "James",
+            "Jasper",
+            "Stephen",
+            "Helena"
+        )
+
+        detail = arrayOf(
+            "Sample Message",
+            "Sample Message",
+            "Sample Message",
+            "Sample Message",
+            "Sample Message",
+            "Sample Message",
+            "Sample Message",
+            "Sample Message",
+            "Sample Message",
+            "Sample Message",
+            "Sample Message",
+            "Sample Message",
+            "Sample Message",
+            "Sample Message",
+            "Sample Message"
+        )
+
+        image = arrayOf(
+            R.drawable.bitmap_ek1,
+            R.drawable.bitmap_ek2,
+            R.drawable.bitmap_ek3,
+            R.drawable.bitmap_ek3,
+            R.drawable.bitmap_ek3,
+            R.drawable.bitmap_ek1,
+            R.drawable.bitmap_ek2,
+            R.drawable.bitmap_ek3,
+            R.drawable.bitmap_ek3,
+            R.drawable.bitmap_ek3,
+            R.drawable.bitmap_ek1,
+            R.drawable.bitmap_ek2,
+            R.drawable.bitmap_ek3,
+            R.drawable.bitmap_ek3,
+            R.drawable.bitmap_ek3
+        )
+
+        for (i in title.indices){
+            val messages = Message(title[i],detail[i],image[i])
+            messageArrayList.add(messages)
+        }
     }
 }
