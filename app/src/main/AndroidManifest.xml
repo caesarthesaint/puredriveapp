@@ -25,11 +25,52 @@
         -->
 
         <activity
+            android:name=".MainActivity"
+            android:label="MainActivity"/>
+
+        <activity
             android:name=".SignInActivity"
             android:label="SignInActivity"/>
+
         <activity
-            android:name=".MainActivity"
-            android:label="MainActivity"
+            android:name=".CustomerSignUp1Activity"
+            android:label="CustomerSignUp1Activity"/>
+
+        <activity
+            android:name=".CustomerSignUp2Activity"
+            android:label="CustomerSignUp2Activity"/>
+
+        <activity
+            android:name=".ChooseUserActivity"
+            android:label="ChooseUserActivity"/>
+
+        <activity
+            android:name=".RentalSignUp1Activity"
+            android:label="RentalSignUp1Activity"/>
+
+        <activity
+            android:name=".RentalSignUp2Activity"
+            android:label="RentalSignUp2Activity"/>
+
+        <activity
+            android:name=".RentalSignUp3Activity"
+            android:label="RentalSignUp3Activity"/>
+
+        <activity
+            android:name=".RentalSignUp4Activity"
+            android:label="RentalSignUp4Activity"/>
+
+        <activity
+            android:name=".RentalSignUp5Activity"
+            android:label="RentalSignUp5Activity"/>
+
+        <activity
+            android:name=".RentalSignUp6Activity"
+            android:label="RentalSignUp6Activity"/>
+
+        <activity
+            android:name=".GetStartedActivity"
+            android:label="GetStartedActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

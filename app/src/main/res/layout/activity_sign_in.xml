@@ -31,7 +31,7 @@
         app:srcCompat="@drawable/signup" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="380dp"
@@ -52,7 +52,7 @@
         android:layout_weight="1"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="Enter Username or Email"
+        android:hint="Enter Username"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -75,10 +75,10 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/txtIndicator"
+        android:id="@+id/tvLoginTitle"
         android:layout_width="266dp"
         android:layout_height="46dp"
-        android:text="Create an account"
+        android:text="Log in"
         android:textAlignment="center"
         android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/etUsername"

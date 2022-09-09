@@ -17,20 +17,26 @@ class SignInActivity : AppCompatActivity() {
     var progressBar: ProgressBar? = null
     var count = 1
     var loginUser = User()
+    lateinit var userType: String
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
         progressBar = findViewById<ProgressBar>(R.id.progressBar) as ProgressBar
 
         btnSignIn.setOnClickListener{
-            txtIndicator.text = "Fetching.."
+            tvLoginTitle.text = "Logging in.."
             progressBar!!.setProgress(count)
             progressBar!!.visibility = View.VISIBLE
-            fetchJson()
+            fetchLogin()
+        }
+
+        tvSignUp.setOnClickListener{
+            loadSignUpActivity()
         }
     }
 
-    private fun fetchJson() {
+    private fun fetchLogin() {
 
         val enteredUsername = etUsername.text.toString()
         val url = "https://my-python-test-api.herokuapp.com/api/login/customer/" + enteredUsername
@@ -40,20 +46,23 @@ class SignInActivity : AppCompatActivity() {
         client.newCall(request).enqueue(object: Callback {
             override fun onResponse(call: Call, response: Response) {
 
-                val body = response?.body?.string()
-                println(body)
+                try{
+                    val body = response?.body?.string()
 
-                val gson = GsonBuilder().create()
+                    val gson = GsonBuilder().create()
 
-                val user = gson.fromJson(body, User::class.java)
-                val username: String = user.Username.toString()
-                val password: String = user.Password.toString()
+                    val user = gson.fromJson(body, User::class.java)
+                    val username: String = user.Username.toString()
+                    val password: String = user.Password.toString()
 
-                loginUser.Username = username
-                loginUser.Password = password
+                    loginUser.Username = username
+                    loginUser.Password = password
+                }catch (e: Exception){
+                    e.printStackTrace()
+                }
 
                 runOnUiThread{
-                    txtIndicator.text = "Fetched.."
+                    // tvLoginTitle.text = "Fetched.."
                     val Username = loginUser.Username
                     val Password = loginUser.Password
                     val enteredUsername = etUsername.text.toString()
@@ -65,13 +74,13 @@ class SignInActivity : AppCompatActivity() {
 
                     if(Username == enteredUsername) {
                         if (Password == enteredPassword) {
-                            txtIndicator.text = "Logged in successfully"
+                            tvLoginTitle.text = "Logged in successfully"
                             loadMainActivity()
                         } else {
-                            txtIndicator.text = "Incorrect Password"
+                            tvLoginTitle.text = "Incorrect Password"
                         }
                     } else {
-                        txtIndicator.text = "Incorrect Username"
+                        tvLoginTitle.text = "Invalid Username"
                     }
                 }
 
@@ -86,6 +95,23 @@ class SignInActivity : AppCompatActivity() {
     private fun loadMainActivity(){
         val intent = Intent(this,MainActivity::class.java)
         startActivity(intent)
+    }
+
+    private fun loadSignUpActivity(){
+
+        userType = intent.getStringExtra("User type").toString()
+
+        if (userType == "Customer"){
+            startActivity(Intent(this,CustomerSignUp1Activity::class.java))
+        }
+
+        if (userType == "Staff"){
+
+        }
+
+        if (userType == "Rental"){
+            startActivity(Intent(this,RentalSignUp1Activity::class.java))
+        }
     }
 
     data class User(
@@ -108,5 +134,4 @@ class SignInActivity : AppCompatActivity() {
 
     data class Location(val locationID: Int, val lotno: String, val addressline: String, val addressline2: String, val state: String, val city: String, val country: String, val zipcode: String)
 
-    data class Jemma(val jemmaname: String)
 }
